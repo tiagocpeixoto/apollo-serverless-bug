@@ -2,9 +2,11 @@ exports.generateEvent = body => ({
     body: body ? JSON.stringify(body) : null,
     headers: {
         "Accept": "application/json",
-        "Content-Type": "application/json",
+        // "content-type": "application/json", // <-- COMMENT THIS...
     },
-    multiValueHeaders: {},
+    multiValueHeaders: {
+        "content-type": "application/json",  // <-- ...AND ADD THIS
+    },
     httpMethod: "POST",
     isBase64Encoded: false,
     path: "/",
@@ -27,5 +29,4 @@ exports.generateEvent = body => ({
         resourcePath: "/",
     },
     resource: "/",
-    // version: "2.0"
 });
