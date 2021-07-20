@@ -15,5 +15,11 @@
   "devDependencies": {
     "jest": "^27.0.6",
     "serverless": "^2.51.2"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.test.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
   }
 }
